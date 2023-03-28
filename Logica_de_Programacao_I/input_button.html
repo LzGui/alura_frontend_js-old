@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<input type="text">
+<button>Clique aqui para verificar</button>
+
+<script>
+    var numero = Math.round(Math.random() * 10)
+
+    var input = document.querySelector("input")
+    input.focus();
+    
+    function verifica() {
+        if (input.value == numero) {
+            alert("Você ACERTOU!!!")
+        } else {
+            alert("Você ERROU!!!!")
+        }
+        input.value = ""
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+</script>
